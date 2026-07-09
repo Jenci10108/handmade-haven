@@ -259,84 +259,84 @@ const productsData = [
 {
 name:"Small things",
 price:"₹199",
-image:"images/product1.jpeg",
+image:"product3.jpeg",
 description:"Beautiful handmade craft made with premium paper."
 },
 
 {
 name:"Quilling art",
 price:"₹299",
-image:"images/product2.jpeg",
+image:"product7.jpeg",
 description:"Creative quilling art made with premium paper."
 },
 
 {
 name:"Wallmate",
 price:"₹299",
-image:"images/product3.jpeg",
+image:"product6.jpeg",
 description:"beautiful wall mate for decorations."
 },
 
 {
 name:"Paper Flower Craft",
 price:"₹99",
-image:"images/product4.jpeg",
+image:"product4.jpeg",
 description:"Handmade decorative paper flowers."
 },
 
 {
 name:"wall mate",
 price:"₹199",
-image:"images/product5.jpeg",
+image:"product5.jpeg",
 description:"Premium handmade wall mate."
 },
 
 {
 name:"Paper flower craft",
 price:"₹299",
-image:"images/product6.jpeg",
+image:"product2.jpeg",
 description:"Special handmade craft."
 },
 
 {
 name:"Wall decorate",
 price:"₹249",
-image:"images/product7.jpeg",
+image:"product1.jpeg",
 description:"use for fastivals."
 },
 
 {
 name:"Creativity",
 price:"₹149",
-image:"images/product8.jpeg",
+image:"product8.jpeg",
 description:"new craft make by everyday."
 },
 
 {
-name:"Birthday Card<",
+name:"Birthday Card",
 price:"₹249",
-image:"images/product9.jpeg",
+image:"product10.jpeg",
 description:"special birthday handmade card."
 },
 
 {
 name:"Handmade Greeting Card",
 price:"₹249",
-image:"images/product10.jpeg",
+image:"product9.jpeg",
 description:"Creative greeting card."
 },
 
 {
 name:"Festival Greeting Card",
 price:"₹249",
-image:"images/product11.jpeg",
+image:"product11.jpeg",
 description:"Festival special handmade card."
 },
 
 {
 name:"Custom Handmade Craft",
 price:"₹239",
-image:"images/product12.jpeg",
+image:"product12.jpeg",
 description:"Customized craft made specially for you."
 }
 

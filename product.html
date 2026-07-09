@@ -54,7 +54,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <div class="product-image">
 
-<img id="productImage">
+<img id="productImage" src="" alt="Product">
 
 
 </div>
@@ -78,15 +78,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <p id="productDescription"></p>
 
 
-<button class="cart-btn">
+<button class="cart-btn" id="productCartBtn">
 Add To Cart
 </button>
 
-
-<button class="buy-btn">
+<button class="buy-btn" id="productBuyBtn">
 Buy Now
 </button>
-
 
 </div>
 
@@ -105,31 +103,44 @@ Buy Now
 </footer>
 
 <script>
+const product = JSON.parse(localStorage.getItem("selectedProduct"));
 
+console.log(product);
 
-let product = 
-JSON.parse(localStorage.getItem("selectedProduct"));
+if(product){
 
+    document.getElementById("productImage").src = product.image;
+    document.getElementById("productName").textContent = product.name;
+    document.getElementById("productPrice").textContent = product.price;
+    document.getElementById("productDescription").textContent = product.description;
 
+}else{
 
-document.getElementById("productImage").src =
-product.image;
+    alert("No product found.");
+}
+// Add to Cart
+document.getElementById("productCartBtn").addEventListener("click", function () {
 
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-document.getElementById("productName").innerHTML =
-product.name;
+    cart.push(product);
 
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-document.getElementById("productPrice").innerHTML =
-product.price;
+    alert(product.name + " added to cart 🛒");
 
+});
 
-document.getElementById("productDescription").innerHTML =
-product.description;
+// Buy Now
+document.getElementById("productBuyBtn").addEventListener("click", function () {
 
+    alert("Proceeding to checkout for " + product.name);
 
+    window.location.href = "checkout.html";
 
+});
 </script>
+
 <script src="script.js"></script>
 
 

@@ -1782,7 +1782,7 @@ color:#ff9900;
 
 .product-card img{
     width:100%;
-    height:220px;
+    height:350px;
     object-fit:cover;
 }
 
@@ -1797,5 +1797,196 @@ color:#ff9900;
         grid-template-columns:1fr!important;
     }
 }
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
 
+/* Tablets */
+@media (max-width:992px){
 
+.product-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+padding:20px;
+}
+
+.top-navbar{
+flex-wrap:wrap;
+gap:15px;
+}
+
+.search-box{
+width:100%;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.categories{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.top-navbar{
+flex-direction:column;
+align-items:center;
+}
+
+.logo-img{
+width:120px;
+}
+
+.search-box{
+width:100%;
+}
+
+.search-box input{
+width:100%;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.product-card{
+width:100%;
+}
+
+.categories{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.offer-container{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.review-container{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+text-align:center;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.product-details{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:20px;
+}
+
+.product-image img{
+width:100%;
+max-width:350px;
+}
+
+.product-info{
+width:100%;
+text-align:center;
+}
+
+nav ul{
+flex-direction:column;
+display:none;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+.hero h1{
+font-size:24px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.product-card img{
+width:100%;
+height:auto;
+}
+
+.buy-btn,
+.cart-btn,
+.view-btn{
+width:100%;
+margin:5px 0;
+}
+
+.newsletter input{
+width:100%;
+}
+
+.newsletter button{
+width:100%;
+margin-top:10px;
+}
+
+.contact-info{
+text-align:center;
+}
+
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+body{
+overflow-x:hidden;
+}
