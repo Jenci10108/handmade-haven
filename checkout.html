@@ -12,9 +12,7 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<script src="https://checkout.razorpay.com/v1/checkout.js">
 
-</script>
 </head>
 
 
@@ -56,133 +54,47 @@ Handmade Haven
 
 
 <!-- CHECKOUT FORM -->
-
-
 <section class="checkout">
-
 
 <h1>Complete Your Order 🛍️</h1>
 
-
 <div class="checkout-box">
 
+<form action="https://formsubmit.co/jencipatel10108@gmail.com" method="POST">
 
-<form id="orderForm">
+    <input type="hidden" name="_subject" value="New Order from Handmade Haven">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
+    <label>Customer Name</label>
+    <input type="text" name="name" placeholder="Customer Name" required>
 
-<label>
-Full Name
-</label>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Customer Email" required>
 
-<input type="text" id="name" placeholder="Enter your name">
+    <label>Phone Number</label>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
 
+    <label>Product Name</label>
+    <input type="text" name="product" placeholder="Product Name" required>
 
+    <label>Quantity</label>
+    <input type="number" name="quantity" placeholder="Quantity" value="1" min="1" required>
 
-<label>
-Mobile Number
-</label>
+    <label>Delivery Address</label>
+    <textarea name="address" placeholder="Delivery Address" required></textarea>
 
-<input type="tel" id="phone" placeholder="Enter mobile number">
+    <button type="submit" class="buy-btn">
+        Place Order 🛒
+    </button>
 
-
-
-<label>
-Email
-</label>
-
-<input type="email" id="email" placeholder="Enter email">
-
-
-
-<label>
-Delivery Address
-</label>
-
-<textarea id="address" placeholder="Enter full address"></textarea>
-
-
-
-<label>
-Payment Method
-</label>
-
-
-<select id="payment">
-
-
-<option>
-Cash on Delivery
-</option>
-
-
-<option>
-UPI Payment
-</option>
-
-
-<option>
-Bank Transfer
-</option>
-
-
-</select>
-
-
-<label>
-Coupon Code
-</label>
-
-
-<input type="text"
-id="coupon"
-placeholder="Enter coupon code">
-<button onclick="applyCoupon()"
-class="cart-btn">
-
-Apply Coupon
-
-</button>
-<button type="button" onclick="makePayment()" class="buy-btn">
-
-Pay Now
-
-</button>
 
 
 </form>
 
 
 </div>
-
-
 </section>
-<section class="gallery">
-
-
-<h2>
-Our Handmade Creations
-</h2>
-
-
-<div class="gallery-box">
-
-
-<img src="images/product1.jpg">
-
-<img src="images/product2.jpg">
-
-<img src="images/product3.jpg">
-
-<img src="images/product4.jpg">
-
-
-</div>
-
-
-</section>
-
-
-
 <footer>
 
 
@@ -198,227 +110,7 @@ Our Handmade Creations
 
 
 
-<script>
 
-document.getElementById("orderForm")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-
-let name =
-document.getElementById("name").value;
-
-
-let phone =
-document.getElementById("phone").value;
-
-
-let email =
-document.getElementById("email").value;
-
-
-let address =
-document.getElementById("address").value;
-
-
-let payment =
-document.getElementById("payment").value;
-
-
-
-if(name==="" || phone==="" || address===""){
-
-
-alert("Please fill all details");
-
-return;
-
-}
-
-
-
-let cart =
-JSON.parse(localStorage.getItem("cart")) || [];
-
-
-
-let products="";
-
-
-cart.forEach((item)=>{
-
-
-products += 
-item.name + 
-" - " +
-item.price +
-"%0A";
-
-
-});
-
-
-
-let message =
-
-"New Handmade Haven Order%0A%0A"+
-
-"Customer Name: "+name+
-"%0A"+
-
-"Mobile: "+phone+
-"%0A"+
-
-"Email: "+email+
-"%0A"+
-
-"Address: "+address+
-"%0A"+
-
-"Payment: "+payment+
-"%0A%0A"+
-
-"Products:%0A"+
-products;
-
-
-
-let yourEmail = 
-"jencipatel10108@gmail.com";
-
-
-
-window.location.href =
-
-"mailto:"+yourEmail+
-"?subject=New Handmade Haven Order"+
-"&body="+message;
-
-
-
-localStorage.removeItem("cart");
-
-
-});
-let orderId = 
-"HH" + Math.floor(Math.random()*100000);
-
-
-
-orders.push({
-
-orderId: orderId,
-
-name:name,
-
-phone:phone,
-
-email:email,
-
-address:address,
-
-payment:payment,
-
-status:"Order Confirmed"
-
-
-});
-
-
-</script>
-
-<script>
-
-
-function makePayment(){
-
-
-let options = {
-
-
-key:"YOUR_RAZORPAY_KEY",
-
-
-amount:50000,
-
-
-currency:"INR",
-
-
-name:"Handmade Haven",
-
-
-description:"Handmade Craft Purchase",
-
-
-
-handler:function(response){
-
-
-alert(
-
-"Payment Successful 🎉\nPayment ID: "
-
-+ response.rzp_test_00009
-
-);
-
-
-
-localStorage.removeItem("cart");
-
-
-window.location.href="index.html";
-
-
-},
-
-
-
-prefill:{
-
-
-name:document.getElementById("name").value,
-
-
-email:document.getElementById("email").value,
-
-
-contact:document.getElementById("phone").value
-
-
-},
-
-
-
-theme:{
-
-
-color:"#ff9900"
-
-
-}
-
-
-};
-
-
-
-let paymentObject = 
-
-new Razorpay(options);
-
-
-
-paymentObject.open();
-
-
-
-}
-
-
-</script>
 
 
 </body>
