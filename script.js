@@ -83,40 +83,19 @@ updateCart();
 /* BUY NOW BUTTON */
 
 
+// BUY NOW BUTTON
+
 let buyButtons = document.querySelectorAll(".buy-btn");
 
+buyButtons.forEach((button) => {
 
-buyButtons.forEach((button)=>{
+    button.addEventListener("click", () => {
 
-
-    button.addEventListener("click",()=>{
-
-
-        let product = button.parentElement;
-
-
-        let name = product.querySelector("h3").innerText;
-
-
-        alert(
-
-        "Thank you for choosing Handmade Haven ❤️\n\n"+
-
-        name+
-
-        "\n\nProceeding to checkout..."
-
-        );
-
-
-        window.location.href="checkout.html";
-
+        window.location.href = "custom-order.html";
 
     });
 
-
 });
-
 
 
 
