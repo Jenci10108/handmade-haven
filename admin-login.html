@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Handmade Haven Admin Login
+</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+<body>
+
+
+<section class="login-section">
+
+
+<div class="login-box">
+
+
+<h1>
+Admin Login 🔐
+</h1>
+
+
+<input type="password"
+id="adminPassword"
+placeholder="Enter Admin Password">
+
+
+<button class="buy-btn"
+onclick="adminLogin()">
+
+Login
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+function adminLogin(){
+
+
+let password =
+
+document.getElementById("adminPassword").value;
+
+
+
+// Change your password here
+
+let correctPassword = "haven123";
+
+
+
+if(password === correctPassword){
+
+
+localStorage.setItem(
+
+"adminLogin",
+
+"true"
+
+);
+
+
+
+alert("Welcome Admin ❤️");
+
+
+window.location.href="dashboard.html";
+
+
+}
+
+else{
+
+
+alert("Wrong Password ❌");
+
+
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

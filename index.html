@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Haven</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <meta name="description" content="Handmade Haven - Beautiful handmade crafts, greeting cards, scrapbooks and custom gifts.">
+
+<meta name="keywords" content="handmade crafts, greeting cards, paper crafts, scrapbook, gifts">
+
+<meta name="author" content="Handmade Haven">
+</head>
+
+<body>
+    
+<h3>📝 How It Works</h3>
+
+<p>
+1. Fill out the form.<br>
+2. We will review your request.<br>
+3. We will contact you by email or phone to discuss the design and price.<br>
+4. After your confirmation, we will start creating your handmade product.
+</p>
+
+</div>
+<div id="loader">
+
+<div class="loader-heart">
+❤️
+</div>
+
+<h2>
+Handmade Haven
+</h2>
+
+</div>
+
+    <!-- HEADER -->
+
+    <header>
+        
+
+        <div class="top-navbar">
+            <button class="menu-btn"
+onclick="openMenu()">
+
+☰
+
+</button>
+<a href="wishlist.html" class="nav-link">
+❤️ Wishlist
+</a>
+
+<a href="track-order.html" class="nav-link">
+📦 Track Order
+</a>
+            <div class="logo">
+
+               <a href="index.html">
+
+<img src="logo.svg" class="logo-img">
+
+</a>
+            </div>
+
+            <div class="search-box">
+
+                <input type="text" placeholder="Search handmade products...">
+
+                <button>
+
+                    <i class="fa fa-search"></i>
+
+                </button>
+
+            </div>
+
+            <div class="nav-icons">
+
+                <div class="nav-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>My Account</span>
+                </div>
+
+                <div class="nav-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Wishlist</span>
+                </div>
+
+               <a href="cart.html" class="nav-item">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Cart</span>
+
+</a>
+
+            </div>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav>
+            
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="#products">Products</a>
+</li>
+
+<li>
+<a href="#">Greeting Cards</a>
+</li>
+
+<li>
+<a href="#">Explosion Boxes</a>
+</li>
+
+<li>
+<a href="#">Paper Crafts</a>
+</li>
+
+<li>
+<a href="login.html">My Account</a>
+</li>
+
+<li>
+<a href="cart.html">
+Cart 🛒
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+            
+
+    </header>
+    <section class="offer-banner">
+
+<h1>
+🎉 Special Offer 🎉
+</h1>
+
+
+<p>
+Get 10% OFF on your first handmade order
+</p>
+
+
+<button onclick="openOffer()">
+
+Shop Now
+
+</button>
+
+
+</section>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Handmade Haven</h1>
+
+            <p>
+
+                Beautiful Handmade Crafts • Greeting Cards • Explosion Boxes • Scrapbooks • Gifts
+
+            </p>
+
+            
+
+        </div>
+
+    </section>
+    <a href="custom-order.html" class="buy-btn">
+
+🎨 Request Custom Order
+
+</a>
+<div class="custom-note">
+
+
+    <!-- CATEGORY BOXES -->
+
+    <section class="categories">
+
+        <div class="category">
+
+            <i class="fa-solid fa-gift"></i>
+
+            <h3>Gift Items</h3>
+
+        </div>
+
+        <div class="category">
+
+            <i class="fa-solid fa-envelope-open-text"></i>
+
+            <h3>Greeting Cards</h3>
+
+        </div>
+
+        <div class="category">
+
+            <i class="fa-solid fa-box-open"></i>
+
+            <h3>Explosion Boxes</h3>
+
+        </div>
+
+        <div class="category">
+
+            <i class="fa-solid fa-scissors"></i>
+
+            <h3>Paper Crafts</h3>
+
+        </div>
+
+    </section>
+    <section class="filter-section">
+
+<h2>Explore Products</h2>
+
+
+<button onclick="filterProducts('all')">
+All
+</button>
+
+
+<button onclick="filterProducts('cards')">
+Greeting Cards
+</button>
+
+
+<button onclick="filterProducts('boxes')">
+Explosion Boxes
+</button>
+
+
+<button onclick="filterProducts('scrapbook')">
+Scrapbooks
+</button>
+
+
+<button onclick="filterProducts('craft')">
+Paper Crafts
+</button>
+
+
+</section>
+
+    <!-- PRODUCTS -->
+
+    <section class="products" id="products">
+
+<h2>Featured Products</h2>
+
+<div class="product-grid">
+            <!-- Product 1 -->
+<div class="product-card" data-category="things">
+    <span class="badge">New</span>
+    <img src="product3.jpeg" alt="Greeting Card">
+    <h3>Small things</h3>
+    
+    <p class="price">₹199</p>
+    <button class="wishlist-btn" onclick="addWishlist(0)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(0)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card" data-category="art">
+    <span class="badge">Sale</span>
+    <img src="product7.jpeg" alt="Explosion Box">
+    <h3>Quilling art</h3>
+   
+    <p class="price">₹299</p>
+    <button class="wishlist-btn" onclick="addWishlist(1)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(1)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 3 -->
+<div class="product-card" data-category="wallmate">
+    <img src="product6.jpeg" alt="Scrapbook">
+    <h3>Wallmate</h3>
+   
+    <p class="price">₹299</p>
+    <button class="wishlist-btn" onclick="addWishlist(2)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(2)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 4 -->
+<div class="product-card" data-category="crafts">
+    <img src="product4.jpeg" alt="Paper Craft">
+    <h3>Paper Flower Craft</h3>
+    
+    <p class="price">₹99</p>
+    <button class="wishlist-btn" onclick="addWishlist(3)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(3)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card" data-category="wall-mate">
+    <img src="product5.jpeg" alt="Gift Box">
+    <h3>wall mate</h3>
+    
+    <p class="price">₹199</p>
+    <button class="wishlist-btn" onclick="addWishlist(4)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(4)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 6 -->
+<div class="product-card" data-category="craft">
+    <img src="product2.jpeg" alt="Birthday Card">
+    <h3>Paper flower craft</h3>
+    
+    <p class="price">₹299</p>
+    <button class="wishlist-btn" onclick="addWishlist(5)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(5)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 7 -->
+<div class="product-card" data-category="decorates">
+    <img src="product1.jpeg" alt="Wedding Card">
+    <h3>Wall decorate</h3>
+   
+    <p class="price">₹249</p>
+    <button class="wishlist-btn" onclick="addWishlist(6)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(6)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 8 -->
+<div class="product-card" data-category="creative">
+    <img src="product8.jpeg" alt="Love Album">
+    <h3>Creativity</h3>
+    
+    <p class="price">₹149</p>
+    <button class="wishlist-btn" onclick="addWishlist(7)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(7)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 9 -->
+<div class="product-card" data-category="card">
+    <img src="product10.jpeg" alt="Mini Album">
+    <h3>Birthday card</h3>
+    
+    <p class="price">₹249</p>
+    <button class="wishlist-btn" onclick="addWishlist(8)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(8)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 10 -->
+<div class="product-card" data-category="greeting">
+    <img src="product9.jpeg" alt="Wall Decoration">
+    <h3>Handmade Greeting Card</h3>
+    
+    <p class="price">₹249</p>
+    <button class="wishlist-btn" onclick="addWishlist(9)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(9)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 11 -->
+<div class="product-card" data-category="festival">
+    <img src="product11.jpeg" alt="Gift Card">
+    <h3>Festival Greeting Card</h3>
+    
+    <p class="price">₹249</p>
+    <button class="wishlist-btn" onclick="addWishlist(10)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(10)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+<!-- Product 12 -->
+<div class="product-card" data-category="custom">
+    <img src="product12.jpeg" alt="Custom Craft">
+    <h3>Custom Handmade Craft</h3>
+   
+    <p class="price">₹239</p>
+    <button class="wishlist-btn" onclick="addWishlist(11)">
+    
+❤️
+
+</button>
+    <button class="view-btn" onclick="viewProduct(11)">
+View Product
+</button>
+    <button class="cart-btn">Add to Cart</button>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+</div>
+</section>
+<!-- ================= OFFERS SECTION ================= -->
+
+<section class="offers">
+
+    <h2>🔥 Today's Special Offers</h2>
+
+    <div class="offer-container">
+
+        <div class="offer-box">
+            <h3>10% OFF</h3>
+            <p>On Greeting Cards</p>
+        </div>
+
+        <div class="offer-box">
+            <h3>20% OFF</h3>
+            <p>On Explosion Boxes</p>
+        </div>
+
+       
+
+    </div>
+
+</section>
+
+<!-- ================= CUSTOMER REVIEWS ================= -->
+
+<section class="reviews">
+
+    <h2>What Our Customers Say</h2>
+
+    <div class="review-container">
+
+        <div class="review-card">
+            ⭐⭐⭐⭐⭐
+            <p>"Beautiful handmade cards with amazing quality!"</p>
+            <h4>- Hetvi Patel</h4>
+        </div>
+
+        <div class="review-card">
+            ⭐⭐⭐⭐⭐
+            <p>"Loved the explosion box. Perfect gift."</p>
+            <h4>- Meri Patel</h4>
+        </div>
+
+        <div class="review-card">
+            ⭐⭐⭐⭐☆
+            <p>"Fast delivery and premium packaging."</p>
+            <h4>- Tanay Patel</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <h2>Subscribe for Latest Offers</h2>
+
+    <p>Get updates about new handmade products.</p>
+
+    <input type="email" placeholder="Enter your email">
+
+    <button>Subscribe</button>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact Handmade Haven</h2>
+
+    <div class="contact-info">
+
+        <p><i class="fa-solid fa-location-dot"></i> Gujarat, India</p>
+
+        
+
+        <p><i class="fa-solid fa-envelope"></i> jencipatel10108@gmail.com</p>
+        <p><h3>If you want to become a product of your choice,please mail tonemail provided</h3></p>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>Handmade Haven</h2>
+
+            <p>
+
+                Handmade Haven offers beautiful handmade greeting cards,
+                explosion boxes, scrapbooks and paper crafts made with love.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Products</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Handmade Haven | Designed with ❤️
+
+    </p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+       

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Account - Handmade Haven</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="login-section">
+
+
+<div class="login-box">
+
+
+<h1>
+Create Account ❤️
+</h1>
+
+
+<form id="signupForm">
+
+
+<label>Name</label>
+
+<input type="text" id="userName"
+placeholder="Enter your name">
+
+
+<label>Email</label>
+
+<input type="email" id="userEmail"
+placeholder="Enter email">
+
+
+<label>Password</label>
+
+<input type="password" id="userPassword"
+placeholder="Create password">
+
+
+<button class="buy-btn">
+
+Create Account
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+
+
+document.getElementById("signupForm")
+
+.addEventListener("submit",function(e){
+
+
+e.preventDefault();
+
+
+
+let user={
+
+
+name:
+document.getElementById("userName").value,
+
+
+email:
+document.getElementById("userEmail").value,
+
+
+password:
+document.getElementById("userPassword").value
+
+
+};
+
+
+
+localStorage.setItem(
+
+"userAccount",
+
+JSON.stringify(user)
+
+);
+
+
+
+alert(
+
+"Account Created Successfully 🎉"
+
+);
+
+
+
+window.location.href="login.html";
+
+
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>

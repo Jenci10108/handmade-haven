@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Track Order - Handmade Haven
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<section class="checkout">
+
+
+<h1>
+Track Your Order 📦
+</h1>
+
+
+
+<div class="checkout-box">
+
+
+<input type="text"
+
+id="orderId"
+
+placeholder="Enter Order ID">
+
+
+
+<button onclick="trackOrder()"
+
+class="buy-btn">
+
+Track Order
+
+</button>
+
+
+
+<div id="result">
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+
+
+function trackOrder(){
+
+
+let id =
+
+document.getElementById("orderId").value;
+
+
+
+let orders =
+
+JSON.parse(localStorage.getItem("orders")) || [];
+
+
+
+let found =
+
+orders.find(order=>order.orderId===id);
+
+
+
+if(found){
+
+
+document.getElementById("result")
+
+.innerHTML=`
+
+<h2>
+Order Found ✅
+</h2>
+
+<p>
+Order ID:
+${found.orderId}
+</p>
+
+<p>
+Status:
+${found.status}
+</p>
+
+<p>
+Customer:
+${found.name}
+</p>
+
+
+`;
+
+
+}
+
+else{
+
+
+document.getElementById("result")
+
+.innerHTML=
+
+"<h3>Order not found ❌</h3>";
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

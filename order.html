@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Handmade Haven Orders</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="top-navbar">
+
+<div class="logo">
+
+<img src="logo.svg" class="logo-img">
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<section class="admin-section">
+
+
+<h1>
+Customer Orders 📦
+</h1>
+
+
+<div id="ordersList">
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+let orders = 
+JSON.parse(localStorage.getItem("orders")) || [];
+
+
+
+let orderBox =
+document.getElementById("ordersList");
+
+
+
+
+function showOrders(){
+
+
+orderBox.innerHTML="";
+
+
+
+if(orders.length===0){
+
+
+orderBox.innerHTML=
+
+"<h2>No Orders Found</h2>";
+
+
+return;
+
+}
+
+
+
+orders.forEach((order,index)=>{
+
+
+orderBox.innerHTML += `
+
+
+<div class="order-card">
+
+
+<h2>
+Order #${index+1}
+</h2>
+
+
+<p>
+<b>Name:</b> ${order.name}
+</p>
+
+
+<p>
+<b>Phone:</b> ${order.phone}
+</p>
+
+
+<p>
+<b>Email:</b> ${order.email}
+</p>
+
+
+<p>
+<b>Address:</b> ${order.address}
+</p>
+
+
+<p>
+<b>Payment:</b> ${order.payment}
+</p>
+
+
+
+<p>
+<b>Status:</b> Pending
+</p>
+
+
+
+<button 
+class="cart-btn"
+onclick="deleteOrder(${index})">
+
+Delete Order
+
+</button>
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+}
+
+
+
+
+function deleteOrder(index){
+
+
+orders.splice(index,1);
+
+
+
+localStorage.setItem(
+
+"orders",
+
+JSON.stringify(orders)
+
+);
+
+
+
+showOrders();
+
+
+}
+
+
+
+showOrders();
+
+
+</script>
+
+
+</body>
+
+</html>

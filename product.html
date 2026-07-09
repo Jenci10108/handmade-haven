@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Handmade Haven - Product</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="top-navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="logo.svg" class="logo-img">
+
+</a>
+
+</div>
+
+
+<a href="cart.html" class="nav-item">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Cart</span>
+
+</a>
+
+
+</div>
+
+</header>
+
+
+
+<section class="product-details">
+
+
+<div class="product-image">
+
+<img id="productImage">
+
+
+</div>
+
+
+
+<div class="product-info">
+
+
+<h1 id="productName"></h1>
+
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+
+<h2 id="productPrice"></h2>
+
+
+<p id="productDescription"></p>
+
+
+<button class="cart-btn">
+Add To Cart
+</button>
+
+
+<button class="buy-btn">
+Buy Now
+</button>
+
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+<p class="copyright">
+
+© 2026 Handmade Haven ❤️
+
+</p>
+
+</footer>
+
+<script>
+
+
+let product = 
+JSON.parse(localStorage.getItem("selectedProduct"));
+
+
+
+document.getElementById("productImage").src =
+product.image;
+
+
+document.getElementById("productName").innerHTML =
+product.name;
+
+
+document.getElementById("productPrice").innerHTML =
+product.price;
+
+
+document.getElementById("productDescription").innerHTML =
+product.description;
+
+
+
+</script>
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Handmade Haven Admin</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="top-navbar">
+
+<div class="logo">
+
+<img src="logo.svg" class="logo-img">
+
+</div>
+
+
+</div>
+
+</header>
+
+
+
+<section class="admin-section">
+
+
+<h1>
+Handmade Haven Admin Panel
+</h1>
+
+
+
+<div class="admin-box">
+
+
+<input type="text" id="productName"
+placeholder="Product Name">
+
+
+
+<input type="number" id="productPrice"
+placeholder="Product Price">
+
+
+
+<input type="text" id="productImage"
+placeholder="Image Path (example images/product13.jpg)">
+
+
+
+<button onclick="addProduct()"
+class="buy-btn">
+
+Add Product
+
+</button>
+
+
+</div>
+
+
+
+<h2>Your Products</h2>
+
+
+<div id="adminProducts"
+class="product-grid">
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+
+if(localStorage.getItem("adminLogin") !== "true"){
+
+
+alert("Access Denied 🔐");
+
+
+window.location.href="admin-login.html";
+
+
+}
+let products = 
+JSON.parse(localStorage.getItem("products")) || [];
+
+
+
+function addProduct(){
+
+
+let name =
+document.getElementById("productName").value;
+
+
+let price =
+document.getElementById("productPrice").value;
+
+
+let image =
+document.getElementById("productImage").value;
+
+
+
+if(name==="" || price==="" || image===""){
+
+
+alert("Fill all details");
+
+return;
+
+}
+
+
+
+let product={
+
+name:name,
+
+price:"₹"+price,
+
+image:image
+
+};
+
+
+
+products.push(product);
+
+
+
+localStorage.setItem(
+
+"products",
+
+JSON.stringify(products)
+
+);
+
+
+
+alert("Product Added Successfully");
+
+
+
+displayProducts();
+
+
+}
+
+
+
+
+function displayProducts(){
+
+
+let box =
+document.getElementById("adminProducts");
+
+
+box.innerHTML="";
+
+
+
+products.forEach((item,index)=>{
+
+
+box.innerHTML += `
+
+
+<div class="product-card">
+
+
+<img src="${item.image}">
+
+
+<h3>${item.name}</h3>
+
+
+<p class="price">
+${item.price}
+</p>
+
+
+<button onclick="deleteProduct(${index})"
+class="cart-btn">
+
+Delete
+
+</button>
+
+
+</div>
+
+
+`;
+
+});
+
+
+}
+
+
+
+function deleteProduct(index){
+
+
+products.splice(index,1);
+
+
+localStorage.setItem(
+
+"products",
+
+JSON.stringify(products)
+
+);
+
+
+displayProducts();
+
+
+}
+
+
+
+displayProducts();
+
+
+</script>
+
+<li>
+
+<a href="dashboard.html">
+
+Dashboard 📊
+
+</a>
+
+</li>
+
+</body>
+
+</html>

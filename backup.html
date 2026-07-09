@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Handmade Haven Backup
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="dashboard">
+
+
+<h1>
+Store Backup 💾
+</h1>
+
+
+
+<div class="stat-card">
+
+
+<button class="buy-btn"
+onclick="exportData()">
+
+Download Backup
+
+</button>
+<input type="file"
+id="backupFile">
+
+
+<button class="buy-btn"
+onclick="restoreData()">
+
+Restore Backup
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<script>
+
+
+function exportData(){
+
+
+let backup = {
+
+
+products:
+
+JSON.parse(localStorage.getItem("products")) || [],
+
+
+orders:
+
+JSON.parse(localStorage.getItem("orders")) || [],
+
+
+users:
+
+JSON.parse(localStorage.getItem("userAccount")) || {}
+
+
+
+};
+
+
+
+let file =
+
+JSON.stringify(
+
+backup,
+
+null,
+
+2
+
+);
+
+
+
+let blob =
+
+new Blob(
+
+[file],
+
+{type:"application/json"}
+
+);
+
+
+
+let link =
+
+document.createElement("a");
+
+
+
+link.href =
+
+URL.createObjectURL(blob);
+
+
+
+link.download =
+
+"Handmade-Haven-Backup.json";
+
+
+
+link.click();
+
+
+
+}
+function restoreData(){
+
+
+let file =
+
+document.getElementById("backupFile").files[0];
+
+
+
+if(!file){
+
+alert("Select backup file");
+
+return;
+
+}
+
+
+
+let reader = new FileReader();
+
+
+
+reader.onload=function(e){
+
+
+let data =
+
+JSON.parse(e.target.result);
+
+
+
+localStorage.setItem(
+
+"products",
+
+JSON.stringify(data.products)
+
+);
+
+
+
+localStorage.setItem(
+
+"orders",
+
+JSON.stringify(data.orders)
+
+);
+
+
+
+localStorage.setItem(
+
+"userAccount",
+
+JSON.stringify(data.users)
+
+);
+
+
+
+alert(
+
+"Backup Restored Successfully 🎉"
+
+);
+
+
+};
+
+
+
+reader.readAsText(file);
+
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

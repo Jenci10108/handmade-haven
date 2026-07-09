@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Handmade Haven - Cart</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="top-navbar">
+
+
+<div class="logo">
+
+<h2>
+<i class="fa-solid fa-heart"></i>
+Handmade Haven
+</h2>
+
+</div>
+
+
+<div class="nav-icons">
+
+
+<div class="nav-item">
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
+
+</div>
+
+
+<div class="nav-item">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Cart</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</header>
+
+
+
+
+<!-- CART SECTION -->
+
+
+<section class="cart-section">
+
+
+<h1>Your Shopping Cart 🛒</h1>
+
+
+
+<div id="cart-items">
+
+
+</div>
+
+
+
+
+<div class="cart-summary">
+
+
+<h2>Total Amount:</h2>
+
+<h2 id="total-price">
+₹0
+</h2>
+
+
+<button onclick="goCheckout()" class="buy-btn">
+
+Proceed To Checkout
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+
+<p class="copyright">
+
+© 2026 Handmade Haven | Handmade with ❤️
+
+</p>
+
+
+</footer>
+
+
+
+
+
+<script>
+
+
+let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+let cartBox=document.getElementById("cart-items");
+
+
+let total=0;
+
+
+
+function displayCart(){
+
+
+cartBox.innerHTML="";
+
+total=0;
+
+
+
+if(cartItems.length===0){
+
+
+cartBox.innerHTML=
+
+"<h2>Your cart is empty 🛒</h2>";
+
+
+return;
+
+
+}
+
+
+
+cartItems.forEach((item,index)=>{
+
+
+let price=parseInt(
+
+item.price.replace("₹","")
+
+);
+
+
+total += price;
+
+
+
+cartBox.innerHTML += `
+
+
+<div class="cart-product">
+
+
+<img src="${item.image}">
+
+
+<div>
+
+
+<h3>${item.name}</h3>
+
+<p>${item.price}</p>
+
+
+<button onclick="removeItem(${index})">
+
+Remove
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+
+document.getElementById("total-price").innerHTML="₹"+total;
+
+
+}
+
+
+
+
+function removeItem(index){
+
+
+cartItems.splice(index,1);
+
+
+localStorage.setItem(
+
+"cart",
+
+JSON.stringify(cartItems)
+
+);
+
+
+displayCart();
+
+
+}
+
+
+
+function goCheckout(){
+
+
+if(cartItems.length===0){
+
+
+alert("Your cart is empty");
+
+
+}
+
+else{
+
+
+window.location.href="checkout.html";
+
+
+}
+
+
+}
+
+
+
+displayCart();
+
+
+</script>
+
+
+</body>
+
+</html>

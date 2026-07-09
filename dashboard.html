@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Handmade Haven Dashboard
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+    <a href="backup.html">
+
+Backup Data 💾
+
+</a>
+<button onclick="logoutAdmin()"
+class="cart-btn">
+
+Logout
+
+</button>
+
+<header>
+
+<div class="top-navbar">
+
+
+<div class="logo">
+
+<img src="logo.svg" class="logo-img">
+
+</div>
+
+
+</div>
+
+</header>
+
+
+
+
+<section class="dashboard">
+
+
+<h1>
+Handmade Haven Dashboard 📊
+</h1>
+
+
+
+<div class="stats">
+
+
+
+<div class="stat-card">
+
+<h2 id="productCount">
+0
+</h2>
+
+<p>
+Products
+</p>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h2 id="orderCount">
+0
+</h2>
+
+<p>
+Orders
+</p>
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<h2 id="customerCount">
+0
+</h2>
+
+<p>
+Customers
+</p>
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<h2 id="sales">
+₹0
+</h2>
+
+<p>
+Total Sales
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+    function logoutAdmin(){
+
+
+localStorage.removeItem("adminLogin");
+
+
+alert("Admin Logged Out");
+
+
+window.location.href="admin-login.html";
+
+
+}
+if(localStorage.getItem("adminLogin") !== "true"){
+
+
+alert("Access Denied 🔐");
+
+
+window.location.href="admin-login.html";
+
+
+}
+
+let products =
+
+JSON.parse(localStorage.getItem("products")) || [];
+
+
+
+let orders =
+
+JSON.parse(localStorage.getItem("orders")) || [];
+
+
+
+
+document.getElementById("productCount").innerHTML =
+
+products.length;
+
+
+
+
+document.getElementById("orderCount").innerHTML =
+
+orders.length;
+
+
+
+let customers = new Set();
+
+
+
+orders.forEach(order=>{
+
+
+customers.add(order.email);
+
+
+});
+
+
+
+document.getElementById("customerCount").innerHTML =
+
+customers.size;
+
+
+
+
+let total = 0;
+
+
+
+orders.forEach(order=>{
+
+
+if(order.price){
+
+
+total += Number(order.price);
+
+
+}
+
+
+});
+
+
+
+document.getElementById("sales").innerHTML =
+
+"₹"+total;
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
