@@ -1990,3 +1990,211 @@ height:auto;
 body{
 overflow-x:hidden;
 }
+
+/* ===========================
+   MOBILE RESPONSIVE DESIGN
+=========================== */
+
+/* Desktop */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.top-navbar{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.search-box{
+width:100%;
+max-width:500px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+body{
+overflow-x:hidden;
+}
+
+.top-navbar{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:15px;
+}
+
+.logo-img{
+width:120px;
+}
+
+.search-box{
+width:100%;
+margin:15px 0;
+}
+
+.search-box input{
+width:100%;
+}
+
+.nav-icons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+nav ul{
+display:none;
+flex-direction:column;
+background:white;
+width:100%;
+padding:10px;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+font-size:28px;
+background:none;
+border:none;
+cursor:pointer;
+}
+
+.hero{
+padding:50px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.product-grid{
+grid-template-columns:1fr;
+gap:20px;
+padding:15px;
+}
+
+.product-card{
+width:100%;
+border-radius:15px;
+}
+
+.product-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.buy-btn,
+.cart-btn,
+.view-btn,
+.wishlist-btn{
+width:100%;
+margin-top:8px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.offer-container,
+.review-container,
+.footer-container{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.newsletter{
+padding:20px;
+text-align:center;
+}
+
+.newsletter input,
+.newsletter button{
+width:100%;
+margin-top:10px;
+}
+
+.contact{
+text-align:center;
+padding:20px;
+}
+
+.product-details{
+display:flex;
+flex-direction:column;
+padding:20px;
+}
+
+.product-image img{
+width:100%;
+max-width:350px;
+margin:auto;
+display:block;
+}
+
+.product-info{
+text-align:center;
+margin-top:20px;
+}
+
+}
+
+/* Small Phones */
+@media (max-width:480px){
+
+.hero h1{
+font-size:24px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.logo-img{
+width:90px;
+}
+
+.category{
+padding:15px;
+}
+
+.product-card img{
+height:220px;
+}
+
+}
