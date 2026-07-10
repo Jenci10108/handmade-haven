@@ -2451,3 +2451,77 @@ body{
     text-align:center;
 }
 }
+/* ================= SMALL MOBILE NAVBAR ================= */
+
+@media screen and (max-width:768px){
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.top-navbar{
+    padding:8px 12px;
+    min-height:55px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    gap:8px;
+}
+
+.logo h2{
+    font-size:18px;
+    margin:0;
+}
+
+.logo i{
+    font-size:18px;
+}
+
+.search-box{
+    width:100%;
+    margin:8px 0;
+}
+
+.search-box input{
+    height:36px;
+    font-size:13px;
+    padding:8px;
+}
+
+.search-box button{
+    width:45px;
+    height:36px;
+}
+
+.nav-icons{
+    gap:12px;
+}
+
+.nav-item i{
+    font-size:18px;
+}
+
+.nav-item span{
+    font-size:10px;
+}
+
+nav ul{
+    padding:6px 0;
+}
+
+nav ul li{
+    margin:8px 0;
+}
+
+nav ul li a{
+    font-size:14px;
+}
+
+.menu-btn{
+    font-size:22px;
+    padding:5px 8px;
+}
+}
