@@ -2366,7 +2366,7 @@ header{
 
 .top-navbar{
     padding:6px 10px;
-    min-height:30px;
+    min-height:20px;
     display:flex;
     flex-direction:row;
     justify-content:space-evenly;
@@ -2384,43 +2384,42 @@ header{
 }
 
 .search-box{
-    width:60%;
-    margin:6px 0;
+    width:50%;
+    margin:4px 0;
 }
 
 .search-box input{
-    height:33px;
-    font-size:10px;
-    padding:6px;
-}
+    height:30px;
+    font-size:8px;
+    padding:64
 
 .search-box button{
-    width:41px;
-    height:32px;
+    width:38px;
+    height:28px;
 }
 
 .nav-icons{
-    gap:8px;
+    gap:5px;
 }
 
 .nav-item i{
-    font-size:14px;
+    font-size:10px;
 }
 
 .nav-item span{
-    font-size:8px;
+    font-size:4px;
 }
 
 nav ul{
-    padding:4px 0;
+    padding:2px 0;
 }
 
 nav ul li{
-    margin:6px 0;
+    margin:4px 0;
 }
 
 nav ul li a{
-    font-size:11px;
+    font-size:8px;
 }
 
 .menu-btn{
