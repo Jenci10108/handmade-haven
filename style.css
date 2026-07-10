@@ -155,7 +155,7 @@ nav ul li a:hover{
 ========================== */
 
 .hero{
-    height:500px;
+    height:200px;
     background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
     url("images/banner.jpg");
     background-size:cover;
@@ -454,68 +454,6 @@ nav ul li a:hover{
 
     margin-top:15px;
     color:#ff9900;
-
-}
-/* ==========================
-   NEWSLETTER
-========================== */
-
-.newsletter{
-
-    padding:50px 20px;
-    background:#232f3e;
-    text-align:center;
-
-}
-
-
-.newsletter h2{
-
-    color:#ff9900;
-    font-size:35px;
-    margin-bottom:15px;
-
-}
-
-
-.newsletter p{
-
-    margin-bottom:20px;
-    color:#ddd;
-
-}
-
-
-.newsletter input{
-
-    width:350px;
-    max-width:90%;
-    padding:14px;
-    border:none;
-    outline:none;
-    border-radius:5px;
-    font-size:16px;
-
-}
-
-
-.newsletter button{
-
-    padding:14px 25px;
-    margin-left:10px;
-    border:none;
-    background:#ff9900;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
-
-}
-
-
-.newsletter button:hover{
-
-    background:#e68a00;
 
 }
 
@@ -2342,46 +2280,11 @@ body{
 
 @media screen and (max-width:768px){
 
-/* Navbar */
-
-.top-navbar{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
-    padding:8px 10px;
-}
-
-.logo h2{
-    font-size:18px;
-}
-
-.search-box{
-    width:100%;
-    margin:10px 0;
-}
-
-.search-box input{
-    padding:10px;
-    font-size:14px;
-}
-
-.nav-icons{
-    gap:10px;
-}
-
-.nav-item i{
-    font-size:18px;
-}
-
-.nav-item span{
-    font-size:11px;
-}
 
 /* Hero */
 
 .hero{
-    height:220px;
+    height:160px;
 }
 
 .hero-content h1{
@@ -2463,7 +2366,7 @@ header{
 
 .top-navbar{
     padding:8px 12px;
-    min-height:55px;
+    min-height:20px;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -2472,56 +2375,56 @@ header{
 }
 
 .logo h2{
-    font-size:18px;
+    font-size:14px;
     margin:0;
 }
 
 .logo i{
-    font-size:18px;
-}
-
-.search-box{
-    width:100%;
-    margin:8px 0;
-}
-
-.search-box input{
-    height:36px;
-    font-size:13px;
-    padding:8px;
-}
-
-.search-box button{
-    width:45px;
-    height:36px;
-}
-
-.nav-icons{
-    gap:12px;
-}
-
-.nav-item i{
-    font-size:18px;
-}
-
-.nav-item span{
-    font-size:10px;
-}
-
-nav ul{
-    padding:6px 0;
-}
-
-nav ul li{
-    margin:8px 0;
-}
-
-nav ul li a{
     font-size:14px;
 }
 
+.search-box{
+    width:60%;
+    margin:5px 0;
+}
+
+.search-box input{
+    height:33px;
+    font-size:10px;
+    padding:6px;
+}
+
+.search-box button{
+    width:40px;
+    height:32px;
+}
+
+.nav-icons{
+    gap:10px;
+}
+
+.nav-item i{
+    font-size:14px;
+}
+
+.nav-item span{
+    font-size:8px;
+}
+
+nav ul{
+    padding:4px 0;
+}
+
+nav ul li{
+    margin:6px 0;
+}
+
+nav ul li a{
+    font-size:11px;
+}
+
 .menu-btn{
-    font-size:22px;
-    padding:5px 8px;
+    font-size:19px;
+    padding:3px 6px;
 }
 }
