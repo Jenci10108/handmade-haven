@@ -2384,14 +2384,15 @@ header{
 }
 
 .search-box{
-    width:50%;
-    margin:4px 0;
+    width:80%;
+    margin:6px 0;
 }
 
 .search-box input{
     height:30px;
     font-size:8px;
-    padding:64
+    padding:6px;
+}
 
 .search-box button{
     width:38px;
