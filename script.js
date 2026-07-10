@@ -181,34 +181,6 @@ product.name +
 
 
 
-/* NEWSLETTER */
-
-
-
-
-    let subscribeButton = document.querySelector(".newsletter button");
-
-if(subscribeButton){
-
-subscribeButton.addEventListener("click",()=>{
-
-let email=document.querySelector(".newsletter input").value;
-
-if(email==""){
-
-alert("Please enter your email");
-
-}else{
-
-alert("Thank you for subscribing ❤️");
-
-document.querySelector(".newsletter input").value="";
-
-}
-
-});
-
-}
 
 
 /* SHOP BUTTON */
