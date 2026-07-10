@@ -2365,13 +2365,13 @@ header{
 }
 
 .top-navbar{
-    padding:8px 12px;
+    padding:6px 10px;
     min-height:30px;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-    gap:8px;
+    gap:6px;
 }
 
 .logo h2{
@@ -2384,8 +2384,8 @@ header{
 }
 
 .search-box{
-    width:80%;
-    margin:8px 0;
+    width:60%;
+    margin:6px 0;
 }
 
 .search-box input{
@@ -2395,36 +2395,36 @@ header{
 }
 
 .search-box button{
-    width:45px;
-    height:36px;
+    width:41px;
+    height:32px;
 }
 
 .nav-icons{
-    gap:10px;
+    gap:8px;
 }
 
 .nav-item i{
-    font-size:18px;
-}
-
-.nav-item span{
-    font-size:10px;
-}
-
-nav ul{
-    padding:6px 0;
-}
-
-nav ul li{
-    margin:8px 0;
-}
-
-nav ul li a{
     font-size:14px;
 }
 
+.nav-item span{
+    font-size:8px;
+}
+
+nav ul{
+    padding:4px 0;
+}
+
+nav ul li{
+    margin:6px 0;
+}
+
+nav ul li a{
+    font-size:11px;
+}
+
 .menu-btn{
-    font-size:22px;
-    padding:5px 8px;
+    font-size:19px;
+    padding:3px 6px;
 }
 }
