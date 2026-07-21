@@ -49,6 +49,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <label>Mobile Number</label>
 <input type="tel" id="phone" required>
 
+<label>Address</label>
+
+<textarea id="address"
+placeholder="delivery address"></textarea>
+
+
 <label>Select Product</label>
 
 <select id="product">
@@ -119,6 +125,7 @@ e.preventDefault();
 let name=document.getElementById("name").value;
 let email=document.getElementById("email").value;
 let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
 let product=document.getElementById("product").value;
 let occasion=document.getElementById("occasion").value;
 let theme=document.getElementById("theme").value;
@@ -131,6 +138,7 @@ let body =
 "Name: "+name+"%0A"+
 "Email: "+email+"%0A"+
 "Phone: "+phone+"%0A%0A"+
+"Address: "+address+"%0A"+
 "Product: "+product+"%0A"+
 "Occasion: "+occasion+"%0A"+
 "Theme: "+theme+"%0A"+
@@ -138,7 +146,7 @@ let body =
 "Special Instructions: "+instruction+"%0A"+
 "Delivery Date: "+date;
 
-let yourEmail="jencipatel10108@gmail.com";
+let yourEmail="jncvptl09@gmail.com";
 
 window.location.href=
 "mailto:"+yourEmail+
